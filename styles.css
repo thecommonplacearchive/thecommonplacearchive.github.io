@@ -1,0 +1,241 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        word-wrap: break-word; /* Prevents long words from overflowing */
+        overflow-wrap: break-word; /* Ensures text breaks in case of unbreakable long words */
+        background-color: #f8f1e4;
+        color: #3b3b3b;
+        line-height: 1.6;
+        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+        background-attachment: fixed;
+    }
+
+    header {
+        background-color: #6d4f29;
+        color: white;
+        text-align: center;
+        padding: 3rem 2rem;
+        border-bottom: 3px solid #3b3b3b;
+        margin-bottom: 2rem; /* Added space between header and the next section */
+        width: 100%; /* Ensures full width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+
+    header .logo-container h1 {
+        font-family: 'Garamond', serif;
+        font-size: 4rem;
+        color: #b5a58d;
+    }
+
+    header .logo-container p {
+        font-size: 1.25rem;
+        font-style: italic;
+    }
+
+    main {
+        padding: 4rem 2rem; /* Adds padding to main content */
+        margin-bottom: 2rem; /* Adds space below main content */
+    }
+
+    .intro {
+        text-align: center;
+        margin-bottom: 3rem; /* Added space between sections */
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+        color: #6d4f29;
+    }
+
+    .cta-button {
+        background-color: #8e735b;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        border: 2px solid #8e735b;
+        transition: all 0.3s ease;
+        font-family: 'Times New Roman', serif;
+        cursor: pointer;
+    }
+
+    .cta-button:hover {
+        background-color: #7d6248;
+        transform: scale(1.05);
+    }
+
+    .explore {
+        margin-top: 3rem;
+        text-align: center;
+        margin-bottom: 3rem; /* Added space between explore section and footer */
+    }
+
+    .explore-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .explore-item {
+        background: #faf4e6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        font-family: 'Georgia', serif; /* Cozy, warm font */
+        transition: all 0.3s ease;
+        width: 300px;
+        margin-bottom: 2rem; /* Prevents items from colliding */
+        color: #6d4f29; /* Soft, warm brown color */
+        font-style: italic; /* Makes the text italic */
+        line-height: 1.6; /* Adds some spacing between lines for readability */
+    }
+    
+    .explore-item a.clickable-text {
+        color: #8e735b; /* Soft brown */
+        text-decoration: underline; /* Underline the clickable text */
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .explore-item a.clickable-text:hover {
+        color: #7d6248; /* Darker shade on hover */
+        text-decoration: none; /* Remove underline on hover */
+    }
+
+    .explore-item:hover {
+        background-color: #e9dfc7;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+    
+    .explore-item:hover p {
+        color: #7d6248; /* Darker brown for text */
+        transition: all 0.3s ease; /* Smooth transition for the size change */
+    }
+    
+    .explore-item p:hover {
+        transform: scale(1.05); /* Slightly increase image size on hover */
+    }
+
+    .explore-item:hover img {
+        transform: scale(1.05); /* Slightly increase image size on hover */
+    }
+
+    .explore-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease; /* Smooth transition for the size change */
+    }
+
+    .profile-link {
+        color: #8e735b; /* Soft brown color */
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: all 0.3s ease; /* Smooth transition for the size change */
+    }
+
+    .profile-link:hover {
+        color: #7d6248; /* Darker brown for hover */
+        font-size: 1.2rem; /* Slightly bigger on hover */
+    }
+
+    footer {
+        background-color: #6c4f3d;
+        padding: 20px 0;
+        text-align: center;
+        color: white;
+        margin-top: 2rem; /* Adds space between footer and content */
+        width: 100%; /* Ensures full width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+
+    footer .cta-button {
+        margin-top: 10px;
+    }
+
+    /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background: #f8d7da; /* Light red background for error */
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+    }
+    
+    .error-message {
+        font-family: 'Georgia', serif;
+        font-size: 1.5rem;
+        color: #721c24; /* Dark red color for the error text */
+        margin-top: 1rem;
+        font-style: italic; /* Italicized for emphasis */
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 0; /* No padding on the body itself to prevent affecting brown parts */
+        }
+
+        .intro h2 {
+            font-size: 2rem; /* Make text slightly smaller on mobile */
+        }
+
+        .cta-button {
+            font-size: 1rem; /* Adjust button size for smaller screens */
+        }
+
+        .explore-grid {
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        header, footer {
+            padding: 3rem 2rem; /* Ensures padding is correct on mobile */
+        }
+
+        main {
+            padding: 3rem 1rem; /* Adjust padding for content in main */
+        }
+    }
