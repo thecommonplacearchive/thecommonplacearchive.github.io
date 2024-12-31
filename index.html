@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Commonplace Archive - A home for forgotten moments and shared memories.">
+    <meta property="og:title" content="The Commonplace Archive">
+    <meta property="og:description" content="A place where memories linger in time. Share your moments and explore the stories of others.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <meta property="og:url" content="http://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>The Commonplace Archive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>The Commonplace Archive</h1>
+            <p>Where memories linger in time.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the Archive</h2>
+            <p>This is a place where people share everyday moments. Whether big or small, these memories connect us all.</p>
+            <a href="#explore"><button class="cta-button">Start Exploring</button></a>
+        </section>
+
+        <section class="intro">
+            <h2>Share Your Moment</h2>
+            <p>Everyone has a memory to share. If it meant something to you, it belongs here.</p>
+            <button class="cta-button" id="openModal">Submit Your Memory</button>
+        </section>
+
+        <section class="explore" id="explore">
+            <div class="explore-grid">
+                <div class="explore-item">
+                    <img src="https://via.placeholder.com/400x300/ddd0c7/4d3c21?text=A+Shared+Walk" alt="Shared walk through the park">
+                    <p>"I used to walk this park every Sunday afternoon. It always felt peaceful, like the world slowed down for just a bit."</p>
+                    <p><strong>ParkWalker87</strong></p>
+                </div>
+                <div class="explore-item">
+                    <img src="https://via.placeholder.com/400x300/ddd0c7/4d3c21?text=Afternoon+Train" alt="Old train at sunset">
+                    <p>"The train ride back home after a long day at work. I’d always watch the sunset out of the window, the way the sky changed colors every time."</p>
+                    <p><strong>CityCommuter</strong></p>
+                </div>
+                <div class="explore-item">
+                    <img src="https://via.placeholder.com/400x300/ddd0c7/4d3c21?text=Unwritten+Story" alt="A half-written letter">
+                    <p>"I found an old letter the other day that I never sent. I had forgotten I even wrote it. I wonder if I ever meant to send it at all."</p>
+                    <p><strong>OldLetters42</strong></p>
+                </div>
+                <div class="explore-item">
+                    <img src="https://via.placeholder.com/400x300/ddd0c7/4d3c21?text=Image" alt="Memory">
+                    <p>"A quiet evening by the lake, <a href="https://cdedkosoy.github.io/redirect" class="clickable-text">watching the ripples on the water</a> as night fell."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2003 The Commonplace Archive | All rights reserved</p>
+            <button class="cta-button">Contact Us</button>
+        </div>
+    </footer>
+
+    <div class="modal" id="memoryModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Submit Your Memory</h2>
+            <p class="error-message">Sorry, this feature is not available in your region.</p>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('memoryModal');
+        const openModalBtn = document.getElementById('openModal');
+        const closeModalBtn = document.getElementById('closeModal');
+    
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+    
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    
+        // Close the modal when clicking outside of the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
